@@ -1,0 +1,10 @@
+# General
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+/*.egg-info/
+*.pyc
+
+# Machine specific
+=*
+
