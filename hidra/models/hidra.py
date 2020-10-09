@@ -47,7 +47,7 @@ class HIDRABase(tf.keras.Model):
 
         return predicted_h
 
-def HIDRA(temporal_encoders='HIDRA', probabilistic=True, name='HIDRA'):
+def HIDRA(temporal_encoders='HIDRA', probabilistic=True, num_predictions=72, name='HIDRA'):
     """Build the HIDRA model.
 
     Args:
@@ -70,7 +70,7 @@ def HIDRA(temporal_encoders='HIDRA', probabilistic=True, name='HIDRA'):
 
     # Regression network
     regression = RegressionNetwork(
-        num_predictions=72 * 2,
+        num_predictions=num_predictions,
         units=[256, 256, 256],
         dropout_rate=0.5,
         probabilistic=probabilistic)
@@ -87,6 +87,14 @@ def HIDRA(temporal_encoders='HIDRA', probabilistic=True, name='HIDRA'):
         ssh_pr = TCN([32,32,32])
 
     model = HIDRABase(weather_cnn_full, weather_pr, ssh_pr, regression, name=name)
+    return model
+
+def get_training_model(model):
+    """Prepares model for training."""
+    negloglik = lambda y_t, y_p: -y_p.log_prob(y_t)
+
+    model.compile(loss=negloglik, metrics=['mean_absolute_error'], optimizer='adam')
+
     return model
 
 def get_inference_model(model):
