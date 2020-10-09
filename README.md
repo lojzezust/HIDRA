@@ -8,12 +8,12 @@ HIDRA is a state-of-the-art deep-learning model for sea level forecasting based 
 Clone the repository, then use `pip` to install HIDRA in the active Python enviroment.
 ```bash
 git clone https://github.com/lojzezust/HIDRA.git
-pip install HIDRA
+pip install HIDRA/
 ```
 
 In you want to make changes to the HIDRA codebase, install the package in develop mode.
 ```bash
-pip install -e HIDRA
+pip install -e HIDRA/
 ```
 
 ## Running examples
