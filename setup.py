@@ -10,7 +10,7 @@ setup(
     version='1.0',
     description='HIDRA Sea Level Forecasting',
     author='Lojze Žust',
-    author_email='lojze.zust@gmail.com',
+    author_email='lojze.zust@fri.uni-lj.si',
     packages=find_packages(include=['hidra', 'hidra.*']),
     install_requires=parse_requirements('requirements.txt')
 )
