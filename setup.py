@@ -2,10 +2,7 @@ import os
 from setuptools import setup
 
 def parse_requirements(file):
-    return sorted(set(
-        line.partition('#')[0].strip()
-        for line in open(os.path.join(os.path.dirname(__file__), file))
-    ) - set(''))
+    return [line for line in open(os.path.join(os.path.dirname(__file__), file))]
 
 setup(
     name='hidra',
