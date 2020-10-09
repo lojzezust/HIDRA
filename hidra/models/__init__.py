@@ -1,1 +1,1 @@
-from .hidra import HIDRA, HIDRABase, get_inference_model
+from .hidra import HIDRA, HIDRABase, add_inference_head

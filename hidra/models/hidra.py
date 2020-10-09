@@ -89,16 +89,16 @@ def HIDRA(temporal_encoders='HIDRA', probabilistic=True, num_predictions=72, nam
     model = HIDRABase(weather_cnn_full, weather_pr, ssh_pr, regression, name=name)
     return model
 
-def get_training_model(model):
-    """Prepares model for training."""
+def compile_model(model):
+    """Prepare model for training."""
     negloglik = lambda y_t, y_p: -y_p.log_prob(y_t)
 
     model.compile(loss=negloglik, metrics=['mean_absolute_error'], optimizer='adam')
 
     return model
 
-def get_inference_model(model):
-    """Get inference model (outputs mean and std) for a probabilistic HIDRA model."""
+def add_inference_head(model):
+    """Add inference head (outputs mean and std) to the model for a probabilistic HIDRA model."""
 
     inference_layer = L.Lambda(lambda x: tf.stack([x.mean(), x.stddev()], axis=-1))
 
