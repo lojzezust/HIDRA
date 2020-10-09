@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 def parse_requirements(file):
     return [line for line in open(os.path.join(os.path.dirname(__file__), file))]
@@ -7,10 +7,10 @@ def parse_requirements(file):
 setup(
     name='hidra',
     python_requires='>=3.6',
-    version='0.1',
+    version='1.0',
     description='HIDRA Sea Level Forecasting',
     author='Lojze Žust',
     author_email='lojze.zust@gmail.com',
-    packages=['hidra'],
+    packages=find_packages(include=['hidra', 'hidra.*']),
     install_requires=parse_requirements('requirements.txt')
 )
