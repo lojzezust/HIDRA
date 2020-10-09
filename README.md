@@ -1,3 +1,5 @@
+# HIDRA 1.0: Deep-learning-based method for sea level forecasting
+
 HIDRA is a state-of-the-art deep-learning model for sea level forecasting based on temporal atmospheric and sea level data.
 
 ![Example sea level predictions (compared with NEMO).](images/example.png)
@@ -16,6 +18,19 @@ In you want to make changes to the HIDRA codebase, install the package in develo
 pip install -e HIDRA/
 ```
 
-## Running examples
+  
+## Usage
 
-A pretrained HIDRA model trained on Koper gauge station data is included.  We provide a [notebook example](examples/prediction.ipynb), showing how to use HIDRA for sea level forecasting on sample data.
+HIDRA is implemented as a Tensorflow Keras model, which enables straight-forward training and inference.
+```python
+from hidra import HIDRA
+model = HIDRA()
+
+# Training
+model.fit(...)
+
+# Inference
+model.predict(...)
+```
+
+A pretrained HIDRA model trained on Koper gauge station data is included in the repository. We provide a [notebook example](examples/prediction.ipynb), showing how to use HIDRA with pretrained weights for sea level forecasting on sample data.

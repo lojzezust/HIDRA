@@ -53,6 +53,7 @@ def HIDRA(temporal_encoders='HIDRA', probabilistic=True, num_predictions=72, nam
     Args:
         temporal_encoders (str, optional): Which temporal encoders to use (One of: 'HIDRA', 'LSTM', 'TCN'). Defaults to 'HIDRA'.
         probabilistic (bool, optional): Model outputs as probability distributions. Defaults to True.
+        num_predictions (int, optional): Number of predicted times.
     """
     # Time invariant atmospheric spatial encoder
     weather_cnn = tf.keras.Sequential([
