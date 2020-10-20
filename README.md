@@ -18,6 +18,10 @@ In you want to make changes to the HIDRA codebase, install the package in develo
 pip install -e HIDRA/
 ```
 
+### GPU processing
+To enable GPU training and inference the [TensorFlow requirements for GPU support](https://www.tensorflow.org/install/gpu#software_requirements) must be met, mainly:
+- a CUDA® compatible card
+- TensorFlow compatible CUDA® version (currently 10.1)
   
 ## Usage
 
