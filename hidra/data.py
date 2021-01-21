@@ -1,5 +1,7 @@
 import json
 import numpy as np
+import h5py
+import tensorflow as tf
 
 class DataNormalization():
 
@@ -54,3 +56,31 @@ class DataNormalization():
 
         mean, std = self.summary['ssh']
         return (ssh_delta_norm * std) + mean
+
+
+def hdf5_dataset(path, fields):
+    """ Creates a tf.data.Dataset from a hdf5 file
+
+    path: path to the hdf5 file,
+    fields: dataset names to read from the hdf5 file,
+
+    returns: tf.data.Dataset
+    """
+
+    # Reads dataset row by row
+    def _generator():
+        with h5py.File(path, 'r') as file:
+            datasets = [file[field] for field in fields]
+            for row in zip(*datasets):
+                yield row
+
+    # Reads hdf5 metadata (types and shapes)
+    with h5py.File(path, 'r') as file:
+        datasets = [file[field] for field in fields]
+
+        types = tuple(ds.dtype for ds in datasets)
+        shapes = tuple(ds.shape[1:] for ds in datasets)
+
+    # Create dataset
+    ds = tf.data.Dataset.from_generator(_generator, types, shapes)
+    return ds
