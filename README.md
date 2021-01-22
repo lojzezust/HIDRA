@@ -54,4 +54,4 @@ Here N defines the number of samples in the dataset, H and W define the spatial 
 
 All the features are standardized using the feature mean and standard deviation. These statistics are stored in the [summary file](data/summary.json) and are used for rescaling the predictions during test-time.
 
-For additional information regarding the model training, please refer to the [HIDRA training example](examples/training.ipynb), detailing how to prepare and load the training data to train your own HIDRA model.
+For additional information regarding the model training and data structure, please refer to the [HIDRA training example](examples/training.ipynb), detailing how to prepare and load the training data to train your own HIDRA model.
