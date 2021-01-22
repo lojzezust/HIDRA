@@ -50,6 +50,8 @@ To train a HIDRA model, prepare the training data, namely the atmospheric input,
 | `lbl_ssh`, `lbl_tide` & `lbl_delta` | N × T<sub>max</sub> × 1 | Target (labels) sea level tensors (full, tidal component and residual component). |
 | `dates` (optional) | N × T<sub>max</sub> | Timestamps corresponding to prediction times of labeled data (`lbl_*`) |
 
+Here N defines the number of samples in the dataset, H and W define the spatial dimensions of the atmospheric data, T<sub>min</sub> and T<sub>max</sub> define the past and future horizons for HIDRA prediction. In our setup we provide the data for the last 24 hours (T<sub>min</sub> = 24) and predict the values for the next 72 hours (T<sub>max</sub> = 72).
+
 All the features are standardized using the feature mean and standard deviation. These statistics are stored in the [summary file](data/summary.json) and are used for rescaling the predictions during test-time.
 
 For additional information regarding the model training, please refer to the [HIDRA training example](examples/training.ipynb), detailing how to prepare and load the training data to train your own HIDRA model.
