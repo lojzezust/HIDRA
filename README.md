@@ -4,6 +4,10 @@ HIDRA is a state-of-the-art deep-learning model for sea level forecasting based 
 
 ![Example sea level predictions (compared with NEMO).](images/example.png)
 
+### HIDRA in action
+
+The most recent forecasts of the operational HIDRA model for the Koper Mareographic Station (northern Adriatic Sea), Slovenia are visualized at: [https://lojzezust.github.io/hidra-visualization](https://lojzezust.github.io/hidra-visualization)
+
 ## Setup
 
 **Requires**: Python ≥ 3.6  
