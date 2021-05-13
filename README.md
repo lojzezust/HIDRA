@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="images/logo.png" alt="HIDRA logo" width="300px">
+</p>
+
 # HIDRA 1.0: Deep-learning-based method for sea level forecasting
 
 HIDRA is a state-of-the-art deep-learning model for sea level forecasting based on temporal atmospheric and sea level data.
