@@ -4,7 +4,7 @@
 
 # HIDRA 1.0: Deep-learning-based method for sea level forecasting
 
-HIDRA is a state-of-the-art deep-learning model for sea level forecasting based on temporal atmospheric and sea level data.
+[HIDRA](#ref) is a state-of-the-art deep-learning model for sea level forecasting based on temporal atmospheric and sea level data.
 
 ![Example sea level predictions (compared with NEMO).](images/example.png)
 
@@ -63,3 +63,24 @@ Here N defines the number of samples in the dataset, H and W define the spatial 
 All the features are standardized using the feature mean and standard deviation. These statistics are stored in the [summary file](data/summary.json) and are used for rescaling the predictions during test-time.
 
 For additional information regarding the model training and data structure, please refer to the [HIDRA training example](examples/training.ipynb), detailing how to prepare and load the training data to train your own HIDRA model.
+
+## Publication
+
+<a name="ref"></a>Zust, L., Fettich, A., Kristan, M., & Licer, M. (2021). HIDRA 1.0: Deep-learning-based ensemble sea level forecasting in the northern Adriatic. Geoscientific Model Development, 14(4), 2057–2074. https://doi.org/10.5194/GMD-14-2057-2021
+
+Cite as:
+```
+@article{Zust2021HIDRA,
+    author = {Zust, Lojze and Fettich, Anja and Kristan, Matej and Licer, Matjaz},
+    doi = {10.5194/GMD-14-2057-2021},
+    journal = {Geoscientific Model Development},
+    month = {apr},
+    number = {4},
+    pages = {2057--2074},
+    publisher = {Copernicus GmbH},
+    title = {{HIDRA 1.0: Deep-learning-based ensemble sea level forecasting in the northern Adriatic}},
+    volume = {14},
+    year = {2021}
+}
+
+```
