@@ -1,10 +1,12 @@
+# HIDRA 1.0: Deep-learning-based method for sea level forecasting
+
+[[`paper`](https://gmd.copernicus.org/articles/14/2057/2021/)] [[`pdf`](https://gmd.copernicus.org/articles/14/2057/2021/gmd-14-2057-2021.pdf)] [[`predictions`](https://lojzezust.github.io/hidra-visualization)] [[`BibTeX`](#ref)]
+
 <p align="center">
     <img src="images/logo.png" alt="HIDRA logo" width="300px">
 </p>
 
-# HIDRA 1.0: Deep-learning-based method for sea level forecasting
-
-[HIDRA](#ref) is a state-of-the-art deep-learning model for sea level forecasting based on temporal atmospheric and sea level data.
+HIDRA is a state-of-the-art deep-learning model for sea level forecasting based on temporal atmospheric and sea level data.
 
 ![Example sea level predictions (compared with NEMO).](images/example.png)
 
