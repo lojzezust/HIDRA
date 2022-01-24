@@ -1,4 +1,4 @@
-# HIDRA 1.0: Deep-learning-based method for sea level forecasting
+# HIDRA 1.0: Deep Learning for Sea Level Forecasting
 
 [[`paper`](https://gmd.copernicus.org/articles/14/2057/2021/)] [[`pdf`](https://gmd.copernicus.org/articles/14/2057/2021/gmd-14-2057-2021.pdf)] [[`predictions`](https://lojzezust.github.io/hidra-visualization)] [[`BibTeX`](#ref)]
 
