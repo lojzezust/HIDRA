@@ -6,13 +6,12 @@
     <img src="images/logo.png" alt="HIDRA logo" width="300px">
 </p>
 
+⭐️ **New**: HIDRA2 has been released. Check out the [code](https://github.com/rusmarko/HIDRA2) and [live predictions](https://lojzezust.github.io/hidra-visualization).
+
 HIDRA is a state-of-the-art deep-learning model for sea level forecasting based on temporal atmospheric and sea level data.
 
 ![Example sea level predictions (compared with NEMO).](images/example.png)
 
-### HIDRA in action
-
-The most recent forecasts of the operational HIDRA model for the Koper Mareographic Station (northern Adriatic Sea), Slovenia are visualized at: [https://lojzezust.github.io/hidra-visualization](https://lojzezust.github.io/hidra-visualization)
 
 ## Setup
 
