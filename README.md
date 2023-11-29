@@ -70,7 +70,7 @@ For additional information regarding the model training and data structure, plea
 <a name="ref"></a>Zust, L., Fettich, A., Kristan, M., & Licer, M. (2021). HIDRA 1.0: Deep-learning-based ensemble sea level forecasting in the northern Adriatic. Geoscientific Model Development, 14(4), 2057–2074. https://doi.org/10.5194/GMD-14-2057-2021
 
 Cite as:
-```
+```bibtex
 @article{Zust2021HIDRA,
     author = {Zust, Lojze and Fettich, Anja and Kristan, Matej and Licer, Matjaz},
     doi = {10.5194/GMD-14-2057-2021},
